@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+    <script src="codigo.js"></script>
+    <style>
+        .fproducto{
+            visibility: hidden;
+        }
+        .visible{
+            visibility: visible;
+        }
+        #factura{
+            width: 50%;
+            margin: 0 auto;
+        }
+        #factura th{
+            background-color: #1d89e5;
+            padding: 10px;
+        }
+        #factura td{
+            background-color: #fefefe;
+            padding: 10px;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid rgba(52, 52, 52, 0.72);
+        }
+        #print{
+            padding: 10px;
+            background-color: #1d89e5;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        #print:hover{
+            background-color: #125084;
+        }
+        ul{
+            list-style-type: none;
+        }
+        ul li{
+            padding: 10px;
+            background-color: #125084;
+            color: white;
+            width: 300px;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+    <form id="fcliente">
+        <input type="text" id="nombrecliente" placeholder="Cliente">
+        <input type="text" id="dnicliente" placeholder="DNI">
+        <input type="text" id="tlfcliente" placeholder="Teléfono">
+        <input type="submit">
+    </form>
+    <form id="fproducto" class="fproducto">
+        <input type="text" id="producto" placeholder="Producto">
+        <input type="text" id="precio" placeholder="Precio">
+        <input type="text" id="cantidad" placeholder="Cantidad">
+        <input type="submit">
+    </form>
+    <h1>Factura del señor/a <span id="cliente"></span></h1>
+    <ul>
+        <li id="empresa"></li>
+        <li id="cif"></li>
+        <li id="telf"></li>
+        <li id="correo"></li>
+    </ul>
+    <ul>
+        <li id="dni"></li>
+        <li id="telf2"></li>
+    </ul>
+    <table id="factura">
+        <tr>
+            <th>ID</th>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Total</th>
+        </tr>
+    </table>
+    <h3>Total: <span id="total"></span>€</h3>
+    
+    <a id="print">Impresión</a>
+</body>
+</html>

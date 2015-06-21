@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo furmulario</title>
+	<link rel="stylesheet" href="apsformulario1.css">
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="apsformulario1-v4.js"></script>
+	<script src="apsfiltroInput-v4.js"></script>
+</head>
+
+<body>
+	<form action="" method="post" name="formulario1" id="formulario1">
+		<fieldset id="nombreApellidos">
+			<legend>Nompre y apellidos</legend>
+			<label for="nombre">Nombre</label>
+			<!-- "required": atributo HTML5 Permite aplicar en CSS la pseudoclase :required y al pulsar submit dará un mensaje de error automáticamente. Ese mensaje se puede completar con el atributo tittle. No hace falta controlar con javaScript si está vacío, salvo que queramos sacar algún mensaje propio en algun lugar concreto.-->
+			<input type="text" id="nombre" name="nombre" size="30"  required title="Tecleando tu nombre" maxLength="50" autofocus /> 
+			<span class="ayuda"></span> <!-- Aquí sacaremos los mensajes de ayuda con javaScript -->
+			<br />
+			<label for="apellidos">Apellidos</label>
+			<input type="text" id="apellidos" name="apellidos" />
+			<span class="ayuda"></span>
+		</fieldset>
+		<!-- El código postal lo vamos a validar mientras se escribe, para impedir teclear letras -->
+		<label for="codPostal">Código postal</label>
+		<input type="text" id="codPostal" name="codPostal" class="filtro numero" caracteresPermitidos="0123456789">
+		<span class="ayuda"></span>
+		<br/>
+		<label for="email">Email</label>
+		<!-- Si en la siguiente etiqueta input ponemos type="email" en lugar de type="text", HTML5 Permite validar un correo electrónico sacando un mensaje en caso de error al pulsar submit -->
+		<input id="email" name="email" type="text" placeholder="ejemplo@izv.es" required>
+		<span class="ayuda"></span>
+		<br/>
+		<label for="hombre">Hombre</label>
+		<input type="radio" name="sexo" id="hombre" />
+		<label for="mujer">Mujer</label>
+		<input type="radio" name="sexo" id="mujer" />
+		<br />
+		<span id="ayudaHombre" class="ayuda"></span>
+
+		<br />
+		<label for="civil">Estado civil</label>
+		<select id="civil">
+			<option value="soltero">Soltero</option>
+			<option value="casado">Casado</option>
+		</select>
+		<br />
+		<label for="dpto">Departamento</label>
+		<select id="dpto" name="dpto">
+			<optgroup label=" Direccion">
+				<option value="gerente">Gerente</option>
+				<option value="director">Director</option>
+			</optgroup>
+			<optgroup label="Informatica">
+				<option value="desarrollo" selected="selected">Desarrollo</option>
+				<option value="sistemas">Sistemas</option>
+			</optgroup>
+		</select>
+		<br />
+		<label for="observaciones">Observaciones</label>
+		<textarea id="observaciones" rows="2" cols="20">Introduce aquí tus observaciones</textarea>
+		<br />
+		<table width="100%" border="0" cellspacing="0" cellpadding="10">
+			<tr>
+				<td>Edad:
+					<br/>
+					<input type="radio" name="edad" value="020">0-20
+					<br/>
+					<input type="radio" name="edad" value="2040" checked>20-40
+					<br/>
+					<input type="radio" name="edad" value="4060">40-60
+					<br/>
+					<input type="radio" name="edad" value="60100">60-100</td>
+				<td>
+					<label for="vehiculo">¿Cómo te desplazas al trabajo?</label>
+					<br/>
+					<input type="checkbox" id="vehiculo" name="vehiculo" value="Bici">En bicicleta
+					<br>
+					<input type="checkbox" id="vehiculo" name="vehiculo" value="Coche" checked="checked">En coche
+					<br>
+					<input type="checkbox" id="vehiculo" name="vehiculo" value="Moto">En moto
+					<br>
+				</td>
+			</tr>
+		</table>
+		<br>¿Cuanto navegas por intenet? (Señala la opción que más se acerque)
+		<br>
+		<select id="frecuencia" name="frecuencia" size="2" multiple>//en Chrome no funciona size, lo hacemos con css
+			<option value="1">2 horas al día.</option>
+			<option value="2">4 horas al día.</option>
+			<option value="3">10 horas a la semana.</option>
+			<option value="4">20 horas al mes.</option>
+		</select>
+		<br/>
+		<label for="foto">Sube una foto:</label>
+		<input type="file" id="foto" name="foto" size="40">
+		<label for="color">Elige tu color favorito:</label>
+		<input type="color" id="color" name="color">
+		<br>
+		<input type="submit" value="Enviar" id="enviar" />
+		<input type="reset" value="Limpiar" />
+		<br/>
+
+	</form>
+</body>
+
+</html>

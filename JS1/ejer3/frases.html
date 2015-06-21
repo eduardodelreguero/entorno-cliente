@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Phrase-o-matic</title>
+		<meta charset="utf-8">
+		<script>
+function makePhrases() { //Primero se define la funcion makePhrases
+//Inicializamos tres arrays con 5 string cada uno
+	var words1 = ["24/7", "multi-Tier", "30,000 foot", "B-to-B", "win-win"];
+	var words2 = ["empowered", "value-added", "oriented", "focused", "aligned"];
+	var words3 = ["process", "solution", "tipping-point", "strategy", "vision"];
+    contador = new Array();
+    contador[0]=0;
+    contador[1]=0;
+    contador[2]=0;
+    contador[3]=0;
+    contador[4]=0;
+// Creamos un número aleatorio por cada array 
+	var rand1 = Math.random()
+    var total=1000000000;
+    for(var x=0; x<total; x++){
+        var rand2 = Math.floor(Math.random() * 5);
+        contador[rand2]++;
+    }
+	var rand3 = Math.floor(Math.random() * words3.length);
+// Creamos la frase con elementos aleatorios de cada array de palabras
+	var phrase = words1[rand1] + " " + words3[rand3];
+// Ponemos la frase obtenida en el párrafo con el id=“phrase”
+	var phraseElement = document.getElementById("phrase");
+	phraseElement.innerHTML = phrase;
+    document.getElementById("lista").innerHTML = "1: "+contador[0]/total*100+"%<br />"+"2: "+contador[1]/total*100+"%<br />"+"3: "+contador[2]/total*100+"%<br />"+"4: "+contador[3]/total*100+"%<br />"+"5: "+contador[4]/total*100+"%<br />suma"+(contador[0]/total*100+contador[1]/total*100+contador[2]/total*100+contador[3]/total*100+contador[4]/total*100);
+}
+/* La función se ejecutará cuando la página esté totalmente cargada */
+
+window.onload = makePhrases; </script>
+	</head>
+	<body>
+		<h1>Phrase-o-Matic says:</h1>
+		<p id="phrase"></p>
+        <p id="lista"></p>
+	</body>
+</html>

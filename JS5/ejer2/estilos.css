@@ -1,0 +1,21 @@
+.mal{
+    background-color: rgba(186, 9, 9, 0.56);
+}
+input[type="text"]{
+    width: 400px;
+    padding: 20px;
+    border-radius: 4px;
+}
+textarea{
+    width: 400px;
+    height: 150px;
+}
+form{
+    width: 50%;
+    padding: 30px;
+    margin: auto;
+    background-color: #ccc;
+}
+form div{
+    padding: 15px;
+}

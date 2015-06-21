@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Formulario</title>
+        <meta charset="UTF-8" />
+        <style>
+            body{
+                margin: 0px;
+                padding: 0px;
+            }
+            #arriba{
+                background-color:#883109; width:100%;color:white;margin:0px;
+            }
+            #abajo{
+                background-color:#083179; width:100%;color:white;margin:0px;
+            }
+        </style>
+        <script>
+            cont=0;
+            window.onload = arriba;
+            function arriba(){
+                if(cont%2==0){
+                    a="arriba";
+                    b="abajo";
+                    
+                }else{
+                    a="abajo";
+                    b="arriba";
+                }
+                    cont++;
+                    document.getElementById(a).setAttribute("style","background-color:#083179;");
+                    document.getElementById(b).setAttribute("style","background-color:#883109;");
+                
+                var divabajo=document.getElementById("abajo");
+                divabajo.innerHTML = "Compra más cerveza";
+            }
+        </script>
+        <script src="bucles.js"></script>
+	</head>
+	<body>
+        <div id="arriba" onclick="arriba()">
+            <h1>hola</h1>
+        </div>
+        <div id="abajo" onclick="arriba()" ><script src="bebida.js"></script></div>
+        
+</body>
+</html>

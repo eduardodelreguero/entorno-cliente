@@ -1,0 +1,55 @@
+.nover{
+    display: none;
+}
+.ver{
+    display: inline;
+    color:white;
+}
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #f3f3f3;
+}
+#central{
+    width: 700px;
+    margin: auto;
+    background-color: #1d85b4;
+    border: 2px solid #1d85b4;
+}
+#form{
+    width: 600px;
+    margin: auto;
+}
+input{
+    padding:15px 30px;
+    border-radius: 8px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+}
+#cancion{
+    background-color: #f3f3f3;
+}
+#boton{
+    background-color: #bc4747;
+    color: white;
+    
+}
+ol{
+    background-color: #bc4747;
+    color: #2b335f;
+}
+li{
+    background-color: #f3f3f3;
+    padding: 10px;
+    font-size: 19px;
+}
+.verde{
+    color:#089808;
+    font-size: 35px
+}
+#titulo{
+    font-size: 25px;
+    width: 100%;
+    background-color: #f3f3f3;
+    padding: 20px 0px;
+    text-align: center;
+}

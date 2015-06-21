@@ -1,0 +1,33 @@
+h1{
+    font-family: Arial;
+}
+#faqs{
+    width: 800px;
+    margin: auto;
+}
+h2 {
+     padding: .25em 0 .25em 25px;
+ }
+ h2.mas {
+     background-color:black;
+     background: url(mas.jpg) no-repeat left center;
+ }
+ h2.menos {
+     background: url(menos.jpg) no-repeat left center;
+ }
+ div.cerrado {
+     display: none;
+ }
+ div.abierto {
+     display: block;
+ }
+div{
+    background-color: #f3f3f3;
+}
+a:focus{
+    background-color: #ddd;
+}
+a{
+    text-decoration: none;
+    color: #383838;
+}

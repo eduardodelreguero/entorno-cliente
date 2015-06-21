@@ -1,0 +1,21 @@
+.enlacea{
+    color:green;
+}
+
+.enlaceb{
+    color:red;
+}
+
+.reducido{
+    background-color:#f82;
+    height: 300px;
+    width: 400px;
+    transition: all 2s ease;
+}
+
+.amplio{
+    background-color:#f82;
+    height: 300px;
+    width: 800px;
+    transition: all 2s ease;
+}

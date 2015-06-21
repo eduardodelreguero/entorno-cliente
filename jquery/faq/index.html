@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="estilos.css" />
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <style>
+    .toggler { width: 500px; height: 200px; position: relative; }
+    #button { padding: .5em 1em; text-decoration: none; }
+    #effect { width: 240px; height: 135px; padding: 0.4em; position: relative; background: #fff; }
+    #effect h3 { margin: 0; padding: 0.4em; text-align: center; }
+        </style>
+    <script src="jquery-ui-1.11.2.custom/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.2.custom/jquery-ui.min.js"></script>
+    <script src="codigo.js"></script>
+  <script>
+      $(function() {
+        $( "#listas" ).accordion({
+          collapsible: true
+        });
+          contador = 0;
+        colores = ["#d06464", "#4cef7e", "#4f9fef", "#d868c2"];
+          animar();
+      });
+      function animar() {
+    var state = true;
+    $( ".escuderia" ).click(function() {
+        $( ".escuderia" ).animate({
+          backgroundColor: colores[contador%colores.length],
+          color: "#fff",
+        }, 1000 );
+      state = !state;
+        contador++;
+    });
+  }
+  </script>
+    <title>Pilotos/Escudería</title>
+</head>
+<body>
+    <h1>Pilotos de la Fórmula 1 2014 por escuderias.</h1>
+    <div id=contenedor>
+        <div id="listas">
+            <h3 class="escuderia"><a href="#">Scuderia Ferrari</a></h3>
+            <div class="cerrado">
+                <ol>
+                    <li><a id="ejem" href="#">Fernando Alonso</a></li>
+                    <li><a href="#">Kimi Räikkönen</a></li>
+                    <li><a href="#">Davide Rigon</a></li>
+                    <li><a href="#">Pedro de la Rosa</a></li>
+                    <li><a href="#">Marc Gené</a></li>
+                </ol>
+            </div>
+            <h3 class="escuderia"><a href="#">Lotus F1 Team</a></h3>
+            <div class="cerrado">
+                <ol>
+                    <li><a href="#">Romain Grosjean</a></li>
+                    <li><a href="#">Pastor Maldonado</a></li>
+                    <li><a href="#">Charles Pic</a></li>
+                </ol>
+            </div>
+            <h3 class="escuderia"><a href="#">Mercedes AMG Petronas F1 Team</a></h3>
+            <div class="cerrado">
+                <ol>
+                    <li><a href="#">Lewis Hamilton</a></li>
+                    <li><a href="#">Nico Rosberg</a></li>
+                    <li><a href="#">Pascal Wehrlein</a></li>
+                </ol>
+            </div>
+        </div>
+        <div id="fotos">
+            <figure>
+                <img id="imagen" src="imagenes/f1.jpg" alt="F1 Logo">
+                <figcaption id="figcap">Logo F1</figcaption>
+            </figure>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>
